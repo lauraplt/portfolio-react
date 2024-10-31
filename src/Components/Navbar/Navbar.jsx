@@ -14,7 +14,7 @@ const Navbar = () => {
             <li>Contact</li>
         </ul>
         <div className="nav-connect">Connect With Me</div>
-         </div>
+ </div>
 
   )
 }

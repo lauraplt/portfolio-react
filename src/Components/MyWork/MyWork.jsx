@@ -4,7 +4,7 @@ import mywork_data from '../../assets/mywork_data.jsx';
 
 const MyWork = () => {
     return (
-        <div>
+        <div className="mywork-block">
             <div className="mywork">
                 <div className="mywork-title">
                     <h1>My work</h1>

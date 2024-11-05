@@ -9,27 +9,37 @@ const mywork_data = [
     {
         w_no:1,
         w_name:"HTML & CSS",
-        w_img:project1_img
+        w_img:project1_img,
+        github_link: "https://github.com/username/project1",
+        tech_stack: "HTML & CSS"
     },
     {
         w_no:2,
         w_name:"Performances web",
-        w_img:project2_img
+        w_img:project2_img,
+        github_link: "https://github.com/username/project1",
+        tech_stack: "HTML & CSS"
     },
     {
         w_no:3,
         w_name:"React JS",
-        w_img:project3_img
+        w_img:project3_img,
+        github_link: "https://github.com/username/project1",
+        tech_stack: "HTML & CSS"
     },
     {
         w_no:4,
         w_name:"Node",
-        w_img:project4_img
+        w_img:project4_img,
+        github_link: "https://github.com/username/project1",
+        tech_stack: "HTML & CSS"
     },
     {
         w_no:5,
         w_name:"Gestion de projet agile",
-        w_img:project5_img
+        w_img:project5_img,
+        github_link: "https://github.com/username/project1",
+        tech_stack: "HTML & CSS"
     },
 
 ]

@@ -16,13 +16,13 @@ const Contact = () => {
                     <p>I am available to take on new projects, so feel free to contact me.</p>
                     <div className="contact-details">
                         <div className="contact-detail">
-                        <img src={mail_icon} alt="" /> <p>laurapplt@gmail.com</p>
+                        <img src={mail_icon} alt=""/><p>laurapplt@gmail.com</p>
                         </div>
                         <div className="contact-detail">
-                        <img src={call_icon} alt="" /> <p>+33669373269</p>    
+                        <img src={call_icon} alt=""/><p>+33669373269</p>    
                         </div>
                         <div className="contact-detail">
-                        <img src={linkedin_icon} alt="" /> <p>Linkedin Profile</p>
+                        <img src={linkedin_icon} alt=""/><p>Linkedin Profile</p>
                         </div>
                     </div>
                 </div>

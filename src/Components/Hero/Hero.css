@@ -1,9 +1,7 @@
 .hero{
     display: flex;
     align-items: center;
-    flex-direction: column;
-    
-    
+    flex-direction: column;   
 }
 .hero h1 {
     text-align: center;

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px;
+    margin: 80px 180px;
     text-align: center;
 }
 
@@ -16,6 +16,7 @@
     padding: 0px 30px;
     font-size: 70px;
     font-weight: 600;
+
 }
 .about-sections{
     display: flex;

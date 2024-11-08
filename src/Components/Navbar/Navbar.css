@@ -14,12 +14,20 @@
 .nav-connect{
     padding: 20px 40px;
     border-radius: 50px;
-    background: #CCAEA4;
+    background: white;
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
-    color: #392E2C;
+    color: #17153B;
 }
 .nav-connect:hover{
     transform: scale(1.05);
+}
+.nav-menu a, .nav-connect a {
+    color: inherit;      
+    text-decoration: none; 
+}
+
+.nav-menu a:hover, .nav-connect a:hover {
+    color: white;       
 }

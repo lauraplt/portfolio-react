@@ -6,26 +6,10 @@ import call_icon from '../../assets/call_icon.svg'
 
 const Contact = () => {
     return ( 
-        <div className='contact'>
+        <div id='contact' className='contact'>
             <div className="contact-title">
-                <h1>Get in Touch</h1>
+                <h1>Let's talk</h1>
             </div>
-            <div className="contact-section">
-                <div className="contact-left">
-                    <h1>Let's talk</h1>
-                    <p>I am available to take on new projects, so feel free to contact me.</p>
-                    <div className="contact-details">
-                        <div className="contact-detail">
-                        <img src={mail_icon} alt=""/><p>laurapplt@gmail.com</p>
-                        </div>
-                        <div className="contact-detail">
-                        <img src={call_icon} alt=""/><p>+33669373269</p>    
-                        </div>
-                        <div className="contact-detail">
-                        <img src={linkedin_icon} alt=""/><p>Linkedin Profile</p>
-                        </div>
-                    </div>
-                </div>
 
                 <form className="contact-right">
                     <label htmlFlor="">Your Name</label>
@@ -39,8 +23,7 @@ const Contact = () => {
                 </form>
             </div>
 
-        </div>
-    )
-}
+    
+)}
 
 export default Contact

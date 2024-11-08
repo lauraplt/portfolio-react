@@ -1,4 +1,4 @@
-.mywork{
+.mywork {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,50 +6,52 @@
     gap: 80px;
     margin: 80px auto;
 }
-.mywork-block{
-    background-color: #CCAEA4;
-    padding-bottom: 20px;
+
+.mywork-block {
+    padding-bottom: 0px;
     padding-top: 5px;
 }
-.mywork-title{
-    position: relative;
-    color: #392E2C;
 
+.mywork-title {
+    position: relative;
+    color: #C8ACD6;
 }
-.mywork-title h1{
-    padding: 0px 30px;
+
+.mywork-title h1 {
+    padding: 0px;
     font-size: 80px;
     font-weight: 600;
 }
+
 .mywork-container {
     max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     align-items: center;
     padding-left: 250px;
 }
+
 .mywork-item {
     position: relative;
     width: 300px;
     height: 180px;
     overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.mywork-item:hover {
+    transform: scale(1.10);
 }
 
 .mywork-item img {
     width: 100%;
     height: 100%;
-    transition: 0.3s;
-    cursor: pointer;
+    object-fit: cover;
     border-radius: 10px;
-}
-
-.mywork-item:hover img {
-    transform: scale(1.10);
-    border-radius: 10px;
-    transition: 0.3s;
 }
 
 .overlay {
@@ -67,6 +69,7 @@
     opacity: 0;
     transition: opacity 0.3s;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .mywork-item:hover .overlay {
@@ -75,21 +78,78 @@
 
 .overlay p {
     font-size: 16px;
-    margin-bottom: 10px;
     margin: 20px;
     text-align: center;
-
 }
 
 .cta {
     padding: 10px 20px;
-    background-color: #FFAE9D;
-    color: black;
+    background-color: white;
+    color: #433D8B;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 50px;
+     transform: scale(1.05);
 }
 
 .cta:hover {
-    background-color: #e89b87;
+    transform: scale(1.05);
 }
+
+
+
+/* modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    color: #433D8B;
+    cursor: default;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  .modal-content p{
+    margin-top: 10px;
+  }
+  
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .github-cta {
+    background-color: #433D8B;
+    color: white;
+  }
+  
+  .close-cta {
+    background: none;
+    color: #433D8B;
+    border-radius: 50px;
+  }
+  
+  .github-cta:hover {
+    transform: scale(1.1);  }
+
+  .close-cta:hover{
+    transform: scale(1.1);
+  }

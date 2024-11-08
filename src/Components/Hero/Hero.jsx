@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './Hero.css'
-import backgroundImage from '../../assets/background_img.png'
+import backgroundImage from '../../assets/background_image.png'
 import useTypewriter from './useTypewriter'
 
 const phrases = [
@@ -15,7 +15,7 @@ const Hero = () => {
     const typedText = useTypewriter(phrases, 50, 2000)
 
     return ( 
-        <div className='hero' style={{ backgroundImage: `url(${backgroundImage})` }} role="banner">
+        <div id='hero' className='hero' role="banner">
             <p className="typewriter" aria-live="polite">
                 {typedText}
                 <span className="cursor" aria-hidden="true"></span>

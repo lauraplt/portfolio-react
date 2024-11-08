@@ -5,6 +5,7 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 180px;
+    margin-top: 30px;
     
 }
 .contact-title{
@@ -16,26 +17,23 @@
     font-weight: 600;
 }
 .contact-section{
-    display: flex;
     gap: 150px;
     
 }
 .contact-left {
-    display: flex;
-    flex-direction: column;
     gap: 30px;
 }
 .contact-left h1 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     background: #DAD2BC;
     -webkit-background-clip: text; 
     background-clip: text;
-    -webkit-text-fill-color: #FFAE9D; 
+    -webkit-text-fill-color: white; 
 }
 .contact-left p{
-    max-width: 550px;
-    color: #D8D8D8;
+    max-width: 800px;
+    color: white;
     font-size: 20px;
     line-height: 35px;
 
@@ -60,14 +58,14 @@ gap: 20px;
 
 }
 .contact-right label{
-    color:#D8D8D8;
+    color: white;
     font-size: 22px;
     font-weight: 500;
 }
 .contact-right input{
     border: none;
-    width: 700px;
-    height: 78px;
+    width: 500px;
+    height: 40px;
     padding-left: 20px;
     border-radius: 4px;
     background: #FAF2EA;
@@ -77,7 +75,7 @@ gap: 20px;
 
 }
 .contact-right textarea{
-    width: 670px;
+    width: 480px;
     height: 100px;
     border: none;
     padding: 25px;
@@ -86,10 +84,11 @@ gap: 20px;
     color: #A0A0A0;
     font-family: Outfit;
     font-size: 20px;
+    margin-bottom: 20px;
 
 }
 .contact-submit {
-    background-color: #CCAEA4;
+    background-color: white;
     color: #392E2C; 
     border-radius: 50px; 
     font-size: 22px;
@@ -99,6 +98,10 @@ gap: 20px;
 margin-bottom: 50px;
 cursor: pointer;
 transition: 0.3s;
+display: flex;
+justify-content: center;
+align-self: center;
+
 }
 .contact-submit:hover{
     transform: scale(1.1);

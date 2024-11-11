@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import './MyWork.css'
 import mywork_data from '../../assets/mywork_data.jsx'
 
-// Composant Modal
 const Modal = ({ isOpen, onClose, work }) => {
   if (!isOpen) return null
 
@@ -26,7 +25,7 @@ const Modal = ({ isOpen, onClose, work }) => {
             rel="noopener noreferrer"
             className="cta github-cta"
           >
-            See the project on GitHub
+            See on GitHub
           </a>
           <button onClick={onClose} className="cta close-cta">
             Close
@@ -58,7 +57,14 @@ const MyWork = () => {
       <div className="mywork-container">
         {mywork_data.map((work, index) => (
           <div className="mywork-item" key={index}>
-            <img src={work.w_img} alt="Project Thumbnail" />
+            <img 
+              src={work.w_img} 
+              alt={`${work.title} Thumbnail`} 
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/placeholder.svg?height=180&width=300';
+              }}
+            />
             <div className="overlay">
               <p>{work.tech_stack}</p>
               <button onClick={() => openModal(work)} className="cta">
@@ -73,4 +79,4 @@ const MyWork = () => {
   )
 }
 
-export default MyWork
+export default MyWork;

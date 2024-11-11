@@ -1,5 +1,5 @@
 .footer {
-    background-color: #433D8B;
+    background-color: black;
     padding: 20px; 
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); 
   }
@@ -27,3 +27,18 @@
     margin-right: 100px; 
   }
   
+
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .footer-top-left img {
+      margin-left: 100px;
+    }
+  
+    .footer-bottom-left {
+      margin-right: 100px;
+    }
+  }

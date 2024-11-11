@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './Hero.css'
-import backgroundImage from '../../assets/background_image.png'
+import backgroundImage from '../../assets/background-img.png'
 import useTypewriter from './useTypewriter'
 
 const phrases = [
@@ -11,28 +11,23 @@ const phrases = [
     "Coding with creativity"
 ]
 
-const Hero = () => {
+export default function Hero() {
     const typedText = useTypewriter(phrases, 50, 2000)
 
     return ( 
-        <div id='hero' className='hero' role="banner">
-            <p className="typewriter" aria-live="polite">
-                {typedText}
-                <span className="cursor" aria-hidden="true"></span>
-            </p>
-            <h1>
-                <span>I'm Laura Polet</span>, <br/>
-                frontend developer.
-            </h1>
-        
-            {/* Uncomment when ready to use
-            <div className="hero-action">
-                <button className="hero-connect">Connect with me</button>
-                <button className="hero-resume">My resume</button>
+        <div id='home' className='hero' role="banner">
+            <div className="hero-overlay"></div>
+            <div className="hero-content">
+                <p className="typewriter" aria-live="polite">
+                    {typedText}
+                    <span className="cursor" aria-hidden="true"></span>
+                </p>
+                <h1 className="gradient-text">
+                    I'm<span> Laura Polet</span>, <br/>
+                    frontend developer.
+                </h1>
+            
             </div>
-            */}
         </div>
     )
 }
-
-export default Hero

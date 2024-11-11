@@ -1,29 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
-import mail_icon from '../../assets/mail_icon.svg'
-import linkedin_icon from '../../assets/linkedin_icon.svg'
-import call_icon from '../../assets/call_icon.svg'
 
 const Contact = () => {
-    return ( 
-        <div id='contact' className='contact'>
-            <div className="contact-title">
-                <h1>Let's talk</h1>
-            </div>
+  const [result, setResult] = useState('');
 
-                <form className="contact-right">
-                    <label htmlFlor="">Your Name</label>
-                    <input type="text" placeholder='Enter your name' name='name'/>
-                    <label htmlFor="">Your Email</label>
-                    <input type="email" placeholder='Enter your email' name='email'/>
-                    <label htmlFor="">Write your message here</label>
-                    <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
-                    <button type='submit' className="contact-submit">Submit now</button>
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "969e91a7-cc61-4cce-b0f5-c3243342630f");
 
-                </form>
-            </div>
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
 
-    
-)}
+      const data = await response.json();
 
-export default Contact
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        setResult("Error: " + data.message);
+      }
+    } catch (error) {
+      setResult("An error occurred. Please try again.");
+    }
+  };
+
+  return (
+    <div id='contact' className='contact'>
+      <div className="contact-title">
+        <h1>Let's talk</h1>
+      </div>
+
+      <form onSubmit={onSubmit} className="contact-right">
+        <label htmlFor="name">Your Name</label>
+        <input type="text" placeholder='Enter your name' name='name' id='name' required />
+        
+        <label htmlFor="email">Your Email</label>
+        <input type="email" placeholder='Enter your email' name='email' id='email' required />
+        
+        <label htmlFor="message">Write your message here</label>
+        <textarea name="message" rows="8" placeholder='Enter your message' id='message' required></textarea>
+        
+        <button type='submit' className="contact-submit">Submit now</button>
+      </form>
+
+      {result && <p className="result-message">{result}</p>}
+    </div>
+  );
+};
+
+export default Contact;

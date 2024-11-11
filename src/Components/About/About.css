@@ -113,8 +113,8 @@
 }
 
 .about-linkedin {
-  background: #abc4ff;
-  color: #17153B;
+  background: #719bff;
+  color: white;
   border-radius: 50px;
   font-size: 18px;
   font-weight: 500;
@@ -127,12 +127,12 @@
 .about-resume {
   appearance: none;
   background: none;
-  color: #abc4ff;
+  color: #719bff;
   border-radius: 50px;
   font-size: 18px;
   font-weight: 500;
   padding: 15px 30px;
-  border: 2px solid #abc4ff; 
+  border: 2px solid #719bff; 
   outline: none; 
   transition: 0.3s;
   cursor: pointer;
@@ -154,6 +154,10 @@
 
   .about-image img {
     width: 150px;
+    
+  }
+  .about-image {
+    top: -5px;
   }
 
   .about-text-bloc{

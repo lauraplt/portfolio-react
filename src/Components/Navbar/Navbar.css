@@ -1,77 +1,82 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 170px;
-    color: black;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto; /* Centralise horizontalement */
+  padding: 0 20px; /* Ajoute un padding pour éviter que les éléments collent aux bords */
+  max-width: 100%; /* Limite la largeur à 100% de l'écran */
+  color: black;
+  box-sizing: border-box; /* Inclut les bordures et padding dans la largeur totale */
+}
 
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  overflow-x: hidden; /* Empêche le débordement horizontal */
 }
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: #719bff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
 }
-.nav-connect{
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: #719bff;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-    color: white;
+.nav-connect:hover {
+  transform: scale(1.05);
 }
-.nav-connect:hover{
-    transform: scale(1.05);
-}
+
 .nav-menu a, .nav-connect a {
-    color: inherit;      
-    text-decoration: none; 
+  color: inherit;      
+  text-decoration: none; 
 }
 
 .nav-menu a:hover, .nav-connect a:hover {
-    color: black;       
+  color: black;       
 }
 
-.nav-mob-close{
-    display: none;
+.nav-mob-close, .nav-mob-open {
+  display: none;
 }
-.nav-mob-open{
-    display: none;
-}
-
-
-
 
 @media (max-width: 768px) {
-    .navbar {
-      margin: 20px 50px;
+  .navbar {
+      margin: 0; /* Supprime les marges */
+      padding: 0 10px; /* Ajuste le padding pour mobile */
+      width: 100%; /* S'assure que la largeur reste à 100% */
+      box-sizing: border-box; /* Gère le débordement */
+  }
 
-    }
-    .nav-connect {
-      display: none;
-    }
-        .nav-mob-open {
-          display: block;
-          position: fixed;
-          right: 20px;
-          top: 20px;
-          z-index: 1000;
-          cursor: pointer;
-          width: 30px; /* Ajoutez une largeur définie */
-          height: 30px; /* Ajoutez une hauteur définie */
-        }
-      
-    .nav-mob-close {
+  .nav-connect {
+      display: none; /* Cache le bouton sur mobile */
+  }
+
+  .nav-mob-open {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 1000;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+  }
+
+  .nav-mob-close {
       display: block;
       position: absolute;
       top: 20px;
       right: 20px;
       width: 30px;
       cursor: pointer;
-    }
-    .nav-menu {
+  }
+
+  .nav-menu {
       position: fixed;
       flex-direction: column;
       align-items: center;
@@ -84,18 +89,53 @@
       z-index: 998;
       transition: right 0.3s ease-in-out;
       padding-top: 60px;
-    }
-    .nav-menu.active {
+      overflow-x: hidden; /* Évite le défilement horizontal */
+  }
+
+  .nav-menu.active {
       right: 0;
-    }
-    .nav-menu li {
+  }
+
+  .nav-menu li {
       font-size: 24px;
       text-align: center;
       width: 100%;
-    }
-    .nav-menu a {
+  }
+
+  .nav-menu a {
       display: block;
       padding: 10px 0;
       width: 100%;
-    }
   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+      margin: 0;
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .nav-menu {
+      width: 100%;
+      justify-content: space-between;
+  }
+
+  .nav-connect {
+  
+      padding: 0px; 
+      border-radius: 30px; 
+      background: #719bff; 
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s; 
+      color: white;
+      margin-left: 50px;
+text-align: center;
+  }
+
+  .nav-connect:hover {
+      transform: scale(1.05);
+  }
+}
